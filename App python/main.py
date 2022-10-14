@@ -25,18 +25,41 @@ cout_max = st.sidebar.number_input('Coût max', value= 99)
 temps_limit = st.sidebar.number_input('Temps limit', value= 100)
 
 st.sidebar.markdown("## Paramètres QoS")
+def test(a):
+   print('  ____    ',a)
+   fiabilite=0
+   disponibile=0
+   cout=0
+   temps_reponse=0
+   securite=0
+   consommation_energie=0
+   if a==1:
+      pass
+   elif a==2 :
+      pass
+   elif a==3 :
+      pass
+   elif a==4 :
+      pass
+   elif a==5 :
+      pass
+   elif a==6 :
+      pass
+   else:
+      pass
+   
 
-fiabilite = st.sidebar.slider('Fiabilité', min_value=0, max_value=100, step= 1, value= 10)
+fiabilite = st.sidebar.slider('Fiabilité', min_value=0, max_value=100, step= 1, value= 10, on_change=test(1))
 
-disponibile = st.sidebar.slider('Disponibilé', min_value=0, max_value=100, step= 1, value= 10)
+disponibile = st.sidebar.slider('Disponibilé', min_value=0, max_value=100, step= 1, value= 10,on_change=test(2))
 
-cout = st.sidebar.slider('Coût', min_value=0, max_value=100, step= 1, value= 50)
+cout = st.sidebar.slider('Coût', min_value=0, max_value=100, step= 1, value= 50,on_change=test(3))
 
-securite = st.sidebar.slider('Securité', min_value=0, max_value=100, step= 1, value= 10)
+securite = st.sidebar.slider('Securité', min_value=0, max_value=100, step= 1, value= 10,on_change=test(4))
 
-temps_reponse = st.sidebar.slider('Temps de réponse', min_value=0, max_value=100, step= 1, value= 10)
+temps_reponse = st.sidebar.slider('Temps de réponse', min_value=0, max_value=100, step= 1, value= 10,on_change=test(5))
 
-consommation_energie = st.sidebar.slider('Consommation d\'énergie', min_value=0, max_value=100, step= 1, value= 10)
+consommation_energie = st.sidebar.slider('Consommation d\'énergie', min_value=0, max_value=100, step= 1, value= 10,on_change=test(5))
 
 
 
