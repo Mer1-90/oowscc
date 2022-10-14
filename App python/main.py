@@ -25,14 +25,27 @@ cout_max = st.sidebar.number_input('Coût max', value= 99)
 temps_limit = st.sidebar.number_input('Temps limit', value= 100)
 
 st.sidebar.markdown("## Paramètres QoS")
+global v_fiabilite
+global v_disponibile
+global v_cout
+global v_securite
+global v_temps_reponse
+global v_consommation_energie
+v_fiabilite=5
+v_disponibile=5
+v_cout=5
+v_securite=5
+v_temps_reponse=5
+v_consommation_energie=5
 def test(a):
    print('  ____    ',a)
-   fiabilite=0
-   disponibile=0
-   cout=0
-   temps_reponse=0
-   securite=0
-   consommation_energie=0
+   global v_fiabilite
+   v_fiabilite=5
+   v_disponibile=5
+   v_cout=5
+   v_securite=5
+   v_temps_reponse=5
+   v_consommation_energie=5
    if a==1:
       pass
    elif a==2 :
@@ -49,17 +62,17 @@ def test(a):
       pass
    
 
-fiabilite = st.sidebar.slider('Fiabilité', min_value=0, max_value=100, step= 1, value= 10, on_change=test(1))
+fiabilite = st.sidebar.slider('Fiabilité', min_value=0, max_value=100, step= 1, value=v_fiabilite, on_change=test(1))
 
-disponibile = st.sidebar.slider('Disponibilé', min_value=0, max_value=100, step= 1, value= 10,on_change=test(2))
+disponibile = st.sidebar.slider('Disponibilé', min_value=0, max_value=100, step= 1, value=v_disponibile,on_change=test(2))
 
-cout = st.sidebar.slider('Coût', min_value=0, max_value=100, step= 1, value= 50,on_change=test(3))
+cout = st.sidebar.slider('Coût', min_value=0, max_value=100, step= 1, value=v_cout,on_change=test(3))
 
-securite = st.sidebar.slider('Securité', min_value=0, max_value=100, step= 1, value= 10,on_change=test(4))
+securite = st.sidebar.slider('Securité', min_value=0, max_value=100, step= 1, value=v_securite,on_change=test(4))
 
-temps_reponse = st.sidebar.slider('Temps de réponse', min_value=0, max_value=100, step= 1, value= 10,on_change=test(5))
+temps_reponse = st.sidebar.slider('Temps de réponse', min_value=0, max_value=100, step= 1, value=v_temps_reponse,on_change=test(5))
 
-consommation_energie = st.sidebar.slider('Consommation d\'énergie', min_value=0, max_value=100, step= 1, value= 10,on_change=test(5))
+consommation_energie = st.sidebar.slider('Consommation d\'énergie', min_value=0, max_value=100, step= 1, value=v_consommation_energie,on_change=test(5))
 
 
 
